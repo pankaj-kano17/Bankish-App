@@ -16,7 +16,7 @@ Bankist App is a JavaScript-based banking application that I developed as part o
 
 ## Demo
 
-A live demo of the Bankish App can be found [here](bankish-web.netlify.app).
+A live demo of the Bankish App can be found [here](https://bankish-web.netlify.app/)
 
 Please note that the live demo may not show the console for security reasons.
 
