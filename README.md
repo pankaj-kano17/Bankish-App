@@ -32,7 +32,7 @@ Please note that the live demo may not show the console for security reasons.
 
 You can access the app profiles with the following usernames and PINs:
 
-### Sadeesha Jayaweera 
+### Pankaj Kanojia 
 
 - 👤 Username: `pk`
 - 🔐 PIN: `1111`
