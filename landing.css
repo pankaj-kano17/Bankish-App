@@ -2,66 +2,270 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background: #f8fafc;
-  color: #0f172a;
+  font-family: 'Segoe UI', sans-serif;
+  background: #ffffff;
+  color: #111;
 }
 
 /* NAVBAR */
 .navbar {
+  border-bottom: 1px solid #f0f0f0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 80px;
+  padding: 25px 80px;
   background: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: 600;
-  color: #22c55e;
+  font-size: 28px;
+  font-weight: 700;
 }
 
 .login-btn {
-  padding: 10px 20px;
-  background: #22c55e;
-  border: none;
+  padding: 10px 22px;
+  background: #00a86b;
   color: white;
-  border-radius: 6px;
-  cursor: pointer;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #000;
 }
 
 /* HERO */
 .hero {
-  height: 90vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  text-align: center;
-  background: linear-gradient(to right, #e0f2fe, #f0fdf4);
+  min-height: calc(100vh - 90px);
+  padding: 0 100px;
+}
+.hero-content {
+  max-width: 500px;
 }
 
-.hero-content h2 {
-  font-size: 48px;
-  margin-bottom: 20px;
+.hero-content h1 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.05;
+  margin-bottom: 24px;
 }
 
 .hero-content p {
-  font-size: 18px;
-  margin-bottom: 30px;
+  font-size: 19px;
   color: #555;
+  margin-bottom: 40px;
+  max-width: 480px;
 }
 
-.cta-btn {
-  padding: 14px 35px;
-  background: #2563eb;
-  border: none;
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.primary-btn {
+  padding: 14px 34px;
+  background: #00a86b;
   color: white;
   border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.primary-btn:hover {
+  background: #000;
+}
+
+.secondary-btn {
+  padding: 14px 34px;
+  border: 2px solid #00a86b;
+  color: #00a86b;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.secondary-btn:hover {
+  background: #00a86b;
+  color: white;
+}
+
+.hero-image img {
+  width: 540px;
+  max-width: 100%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 30px;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image {
+    display: flex;
+    align-items: center;
+  }
+}
+/* ================= ABOUT SECTION ================= */
+
+.about {
+  padding: 100px 10%;
+  background: linear-gradient(135deg, #f9fafb, #eef2ff);
+}
+
+.about-container {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 42px;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.about-text h2 span {
+  color: #16a34a;
+}
+
+.about-text p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+/* Glass Card */
+.about-card {
+  flex: 1;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.12);
+}
+
+.about-card h3 {
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.about-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-card li {
+  margin-bottom: 18px;
+  font-size: 17px;
+  color: #444;
+}
+
+/* ================= HOW IT WORKS ================= */
+
+.how-it-works {
+  padding: 100px 10%;
+  text-align: center;
+  background: #ffffff;
+}
+
+.how-it-works h2 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.how-it-works h2 span {
+  color: #16a34a;
+}
+
+.subtitle {
+  margin-top: 15px;
+  color: #666;
+  font-size: 18px;
+  margin-bottom: 60px;
+}
+
+.steps {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.step-card {
+  background: white;
+  padding: 40px;
+  width: 320px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gradient Glow Effect */
+.step-card::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, #16a34a, #22c55e);
+}
+
+.step-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.step-number {
+  font-size: 34px;
+  font-weight: 700;
+  color: #16a34a;
+  margin-bottom: 20px;
+}
+
+.step-card h3 {
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.step-card p {
+  color: #555;
   font-size: 16px;
+  line-height: 1.6;
 }
