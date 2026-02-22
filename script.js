@@ -74,8 +74,8 @@ const displayMovements = function (movements, sort = false) {
     const html = `
     <div class="movements__row">
           <div class="movements__type movements__type--${type}">${
-      i + 1
-    } ${type}</div>
+            i + 1
+          } ${type}</div>
           <div class="movements__value">${mov}€</div>
         </div>`;
 
@@ -142,7 +142,7 @@ btnLogin.addEventListener('click', function (e) {
   e.preventDefault();
 
   currentAccount = accounts.find(
-    (acc) => acc.username === inputLoginUsername.value
+    (acc) => acc.username === inputLoginUsername.value,
   );
   console.log(currentAccount);
 
@@ -167,7 +167,7 @@ btnTransfer.addEventListener('click', function (e) {
 
   const amount = Number(inputTransferAmount.value);
   const receiverAcc = accounts.find(
-    (acc) => acc.username === inputTransferTo.value
+    (acc) => acc.username === inputTransferTo.value,
   );
 
   inputTransferAmount.value = inputTransferTo.value = '';
@@ -212,7 +212,7 @@ btnClose.addEventListener('click', function (e) {
     Number(inputClosePin.value) === currentAccount.pin
   ) {
     const index = accounts.findIndex(
-      (acc) => acc.username === currentAccount.username
+      (acc) => acc.username === currentAccount.username,
     );
 
     console.log(index);

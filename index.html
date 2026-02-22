@@ -1,126 +1,100 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="shortcut icon" type="image/png" href="/new.png" />
-
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="style.css" />
     <title>Bankish</title>
+    <link rel="shortcut icon" type="image/png" href="image/new.png" />
+    <link rel="stylesheet" href="landing.css" />
   </head>
   <body>
-    <!-- TOP NAVIGATION -->
-    <nav>
-      <p class="welcome">Log in to get started</p>
-      <img src="logo.png" alt="Logo" class="logo" />
-      <form class="login">
-        <input
-          type="text"
-          placeholder="user"
-          class="login__input login__input--user"
-        />
-        <!-- In practice, use type="password" -->
-        <input
-          type="text"
-          placeholder="PIN"
-          maxlength="4"
-          class="login__input login__input--pin"
-        />
-        <button class="login__btn">&rarr;</button>
-      </form>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <h1 class="logo">Bankish</h1>
+      <a href="app.html" class="login-btn">Login</a>
     </nav>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Modern Banking<br />Made Simple</h1>
 
-    <main class="app">
-      <!-- BALANCE -->
-      <div class="balance">
-        <div>
-          <p class="balance__label">Current balance</p>
-          <p class="balance__date">
-            As of <span class="date">05/03/2037</span>
+        <p>
+          Secure digital banking with instant transfers, smart insights and
+          powerful financial tools.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="app.html" class="primary-btn">Get Started</a>
+          <a href="#features" class="secondary-btn">Learn More</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="image/bank.png" alt="Bank Illustration" />
+      </div>
+    </section>
+    <!-- ================= ABOUT SECTION ================= -->
+    <section class="about">
+      <div class="about-container">
+        <div class="about-text">
+          <h2>About <span>Bankish</span></h2>
+          <p>
+            Bankish is a modern digital banking platform designed to simplify
+            financial management. We combine powerful technology with elegant
+            design to deliver secure, seamless, and smart banking experiences.
+          </p>
+          <p>
+            Our goal is to give you complete financial control — anytime,
+            anywhere — with industry-grade security and real-time insights.
           </p>
         </div>
-        <p class="balance__value">0000€</p>
-      </div>
 
-      <!-- MOVEMENTS -->
-      <div class="movements">
-        <div class="movements__row">
-          <div class="movements__type movements__type--deposit">2 deposit</div>
-          <div class="movements__date">3 days ago</div>
-          <div class="movements__value">4 000€</div>
+        <div class="about-card">
+          <h3>Why Choose Bankish?</h3>
+          <ul>
+            <li>🔐 End-to-End Encrypted Transactions</li>
+            <li>⚡ Instant & Secure Transfers</li>
+            <li>📊 Smart Financial Insights</li>
+            <li>📱 Seamless Digital Experience</li>
+          </ul>
         </div>
-        <div class="movements__row">
-          <div class="movements__type movements__type--withdrawal">
-            1 withdrawal
+      </div>
+    </section>
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section class="how-it-works">
+      <div class="works-container">
+        <h2>How It <span>Works</span></h2>
+        <p class="subtitle">
+          Getting started is simple and takes less than 5 minutes.
+        </p>
+
+        <div class="steps">
+          <div class="step-card">
+            <div class="step-number">01</div>
+            <h3>Create Account</h3>
+            <p>
+              Register securely with your basic details and verify your
+              identity.
+            </p>
           </div>
-          <div class="movements__date">24/01/2037</div>
-          <div class="movements__value">-378€</div>
+
+          <div class="step-card">
+            <div class="step-number">02</div>
+            <h3>Fund Wallet</h3>
+            <p>Add money securely using trusted payment methods.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">03</div>
+            <h3>Transfer & Track</h3>
+            <p>Send money instantly and monitor transactions in real time.</p>
+          </div>
         </div>
       </div>
-
-      <!-- SUMMARY -->
-      <div class="summary">
-        <p class="summary__label">In</p>
-        <p class="summary__value summary__value--in">0000€</p>
-        <p class="summary__label">Out</p>
-        <p class="summary__value summary__value--out">0000€</p>
-        <p class="summary__label">Interest</p>
-        <p class="summary__value summary__value--interest">0000€</p>
-        <button class="btn--sort">&downarrow; SORT</button>
-      </div>
-
-      <!-- OPERATION: TRANSFERS -->
-      <div class="operation operation--transfer">
-        <h2>Transfer money</h2>
-        <form class="form form--transfer">
-          <input type="text" class="form__input form__input--to" />
-          <input type="number" class="form__input form__input--amount" />
-          <button class="form__btn form__btn--transfer">&rarr;</button>
-          <label class="form__label">Transfer to</label>
-          <label class="form__label">Amount</label>
-        </form>
-      </div>
-
-      <!-- OPERATION: LOAN -->
-      <div class="operation operation--loan">
-        <h2>Request loan</h2>
-        <form class="form form--loan">
-          <input type="number" class="form__input form__input--loan-amount" />
-          <button class="form__btn form__btn--loan">&rarr;</button>
-          <label class="form__label form__label--loan">Amount</label>
-        </form>
-      </div>
-
-      <!-- OPERATION: CLOSE -->
-      <div class="operation operation--close">
-        <h2>Close account</h2>
-        <form class="form form--close">
-          <input type="text" class="form__input form__input--user" />
-          <input
-            type="password"
-            maxlength="6"
-            class="form__input form__input--pin"
-          />
-          <button class="form__btn form__btn--close">&rarr;</button>
-          <label class="form__label">Confirm user</label>
-          <label class="form__label">Confirm PIN</label>
-        </form>
-      </div>
-
-      <!-- LOGOUT TIMER -->
-      <p class="logout-timer">
-        You will be logged out in <span class="timer">05:00</span>
-      </p>
-    </main>
-
-    <footer>&copy; by Pankaj Kumar Kanojia. Don't claim as your own :</footer>
-
-    <script src="script.js"></script>
+    </section>
+    <footer class="footer">
+      <p>© 2026 Bankish. Built by Pankaj Kanojia.</p>
+    </footer>
   </body>
 </html>
